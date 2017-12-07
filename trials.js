@@ -11,9 +11,16 @@ nestedClassNames = {
 // yP is the class for each "from" header in the email table 
 el = document.getElementsByClassName("yP")
 
-
+// cdn link for external stylesheet
+https://cdn.rawgit.com/Rabid-Dan/mailPlus/f14f8167/replacement-styles.css
 
 
 for (var i = 0, len = el.length; i < len; i++) {
   el[i].style.fontWeight = "bold";
 }
+
+var script = document.createElement('link');
+script.rel = 'stylesheet';
+script.href = 'https://cdn.rawgit.com/Rabid-Dan/mailPlus/f14f8167/replacement-styles.css';    
+
+document.head.appendChild(script);
