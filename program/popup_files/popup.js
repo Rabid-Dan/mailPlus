@@ -96,14 +96,17 @@ function saveBackgroundColor(url, color) {
 }
 
 function changeTypeSettingsForPage(){
-  var script = 'document.body.style.font-family=" georgia !important";';
+  var styleChange = document.createElement('link');
+  styleChange.rel = 'stylesheet';
+  // the href below does not auto update so needs to be generated from https://rawgit.com/ after changes
+  styleChange.href = 'https://cdn.rawgit.com/Rabid-Dan/mailPlus/1cd81603/replacement-styles.css';    
   // See https://developer.chrome.com/extensions/tabs#method-executeScript.
   // chrome.tabs.executeScript allows us to programmatically inject JavaScript
   // into a page. Since we omit the optional first argument "tabId", the script
   // is inserted into the active tab of the current window, which serves as the
   // default.
   chrome.tabs.executeScript({
-    code: script
+    code: document.head.appendChild(styleChange);
   });
 }
 
@@ -131,7 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Ensure the background color is changed and saved when the dropdown
     // selection changes.
     optimizeButton.addEventListener('click', () => {
-      console.log("")
+      console.log(" yes")
       changeTypeSettingsForPage()
     });
   });

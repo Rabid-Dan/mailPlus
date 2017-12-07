@@ -35,7 +35,12 @@
   background:#f8f8f8;
 }
 
-/*padding class on each mail row item*/
-.UI table tr .xY{
-  padding:10px 0px;
+/*padding class on each mail row item (read)*/
+.UI table tr .yO .xY{
+  padding:9px 0px;
+}
+
+/*padding class on each mail row item (unread)*/
+.UI table tr .zE .xY{
+  padding:12px 0px;
 }
