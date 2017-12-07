@@ -21,6 +21,7 @@ for (var i = 0, len = el.length; i < len; i++) {
 
 var script = document.createElement('link');
 script.rel = 'stylesheet';
-script.href = 'https://cdn.rawgit.com/Rabid-Dan/mailPlus/f14f8167/replacement-styles.css';    
+// the href below does not auto update so needs to be generated from https://rawgit.com/ after changes
+script.href = 'https://cdn.rawgit.com/Rabid-Dan/mailPlus/119c4efd/replacement-styles.css';    
 
 document.head.appendChild(script);
