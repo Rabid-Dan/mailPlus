@@ -1,4 +1,41 @@
-/*"sent from" name item in mail list view*/
-.yP{
+/*"sent from" name item in mail list view (read)*/
+.yP, .zF{
   font-weight: bold;
+  font-size:14px;
+  padding-left:10px;
+}
+
+/*"sent from" name item in mail list view (unread)*/
+.zF{
+  padding:7px;
+  margin-left:5px;
+  border:1px solid #317224;
+  color:#317224;
+  border-radius:3px;
+}
+
+/*container for unread "sent from" name item in mail list view*/
+.UI table tr .yW{
+  overflow:visible;
+  padding:7px 0px
+}
+
+/*bolding on first part of an unread email*/
+.y6 .bog b{
+  color:#317224;
+}
+
+/*  time send on right hand side of email list*/
+.UI table tr td.xW.xY{
+  padding-right:10px;
+} 
+
+/*list view row*/
+.yO{
+  background:#f8f8f8;
+}
+
+/*padding class on each mail row item*/
+.UI table tr .xY{
+  padding:10px 0px;
 }
